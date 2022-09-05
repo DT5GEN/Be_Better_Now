@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Be Better Now</string>
+    <string name="app_name">Be Better</string>
+    <string name="slogan">get BETTER now</string>
+    <string name="day">Day:</string>
+    <string name="workouts">  workouts</string>
+
 </resources>
