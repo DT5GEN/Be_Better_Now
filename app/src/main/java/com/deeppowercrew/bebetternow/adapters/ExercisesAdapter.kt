@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.deeppowercrew.bebetternow.R
 import com.deeppowercrew.bebetternow.databinding.ExersiseListItemBinding
+import pl.droidsonroids.gif.GifDrawable
 
 class ExercisesAdapter() :
     ListAdapter<ExerciseModel, ExercisesAdapter.ExerciseHolder>(MyComparator()) {
@@ -20,7 +21,7 @@ class ExercisesAdapter() :
 
             exerciseListItemTvName.text = exercise.name
             exerciseListItemTvReps.text = exercise.time
-            exerciseListItemImage
+            exerciseListItemImage.setImageDrawable(GifDrawable(root.context.assets,exercise.image))
                 exerciseListItemImageCheckBox
 
         }
