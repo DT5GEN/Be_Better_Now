@@ -5,16 +5,17 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.deeppowercrew.bebetternow.databinding.PreparatoryFragmentBinding
+import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.TimeUtils
 
 
 /**
  * description fragment
  */
-const val COUNT_DOWN_TIME = 16000L
+const val COUNT_DOWN_TIME = 6000L
 
 class PreparatoryFragment : Fragment() {
 
@@ -44,7 +45,10 @@ class PreparatoryFragment : Fragment() {
             }
 
             override fun onFinish() {
-                Toast.makeText(activity, "Done", Toast.LENGTH_SHORT).show()
+                FragmentManager.setFragment(
+                    ExerciseFragment.newInstance(),
+                    activity as AppCompatActivity
+                )
             }
 
         }.start()
