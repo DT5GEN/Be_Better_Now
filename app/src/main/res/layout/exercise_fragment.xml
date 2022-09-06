@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <ImageView
-            android:id="@+id/exercise_name"
+            android:id="@+id/head_gif"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@android:drawable/presence_video_busy" />
@@ -42,7 +42,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/exercise_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -58,7 +58,7 @@
                 android:fontFamily="@font/sonsie_one"
                 android:text="00:30"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="60" />
+                android:textSize="60sp" />
 
             <ProgressBar
                 android:id="@+id/progressBar2"
