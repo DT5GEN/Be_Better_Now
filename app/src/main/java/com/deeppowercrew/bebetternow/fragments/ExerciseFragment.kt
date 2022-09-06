@@ -33,25 +33,30 @@ class ExerciseFragment : Fragment() {
     ): View {
         binding = ExerciseFragmentBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        model.mutableListExercise.observe(viewLifecycleOwner) {
+            model.mutableListExercise.observe(viewLifecycleOwner) {
             exerciseList = it
             nextExercise()
         }
         binding.buttonNext.setOnClickListener {
+            timer?.cancel()
+
             nextExercise()
+
         }
 
     }
 
 
     private fun nextExercise() {
+        binding.progressBar2.max = 0
         if (exerciseCounter < exerciseList?.size!!) {
             val ex = exerciseList?.get(exerciseCounter++) ?: return
+
             showExercise(ex)
             setExerciseType(ex)
             showNextExercise()
@@ -81,16 +86,21 @@ class ExerciseFragment : Fragment() {
         if (exerciseCounter < exerciseList?.size!!) {
             val ex = exerciseList?.get(exerciseCounter) ?: return
             nextGif.setImageDrawable(GifDrawable(root.context.assets, ex.image))
-            val name = ex.name + " : ${ex.name}"
-            textNextExercise.text = name
+           // val name = ex.name + " : ${ex.time}"
+            setTimeType(ex)
         } else {
             nextGif.setImageDrawable(GifDrawable(root.context.assets, "rest.gif"))
             textNextExercise.text = getString(R.string.well_done)
         }
     }
 
-    private fun getTimeType(exercise: ExerciseModel){
-
+    private fun setTimeType(exercise: ExerciseModel){
+        if (exercise.time.startsWith("x")) {
+            binding.textNextExercise.text = exercise.time
+        } else {
+            val name = exercise.name + "  ${TimeUtils.getTime(exercise.time.toLong() * 1000)}"
+            binding.textNextExercise.text = name
+        }
     }
 
 
