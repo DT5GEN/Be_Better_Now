@@ -10,9 +10,11 @@
         android:id="@+id/preparatory_fragment_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:text="@string/waiting_message"
-        android:textColor="@color/blue_dark"
-        android:textSize="8sp"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textSize="60sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/preparatory_fragment_text_timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

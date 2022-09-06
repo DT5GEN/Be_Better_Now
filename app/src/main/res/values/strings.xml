@@ -4,5 +4,6 @@
     <string name="day">Day:</string>
     <string name="workouts">  workouts</string>
     <string name="waiting_message"> get ready </string>
+    <string name="start_button"> start </string>
 
 </resources>
