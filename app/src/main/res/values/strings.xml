@@ -3,5 +3,6 @@
     <string name="slogan">get BETTER now</string>
     <string name="day">Day:</string>
     <string name="workouts">  workouts</string>
+    <string name="waiting_message"> get ready </string>
 
 </resources>

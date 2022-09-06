@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/alata</item>
+        <item>@font/andada</item>
         <item>@font/londrina_shadow</item>
+        <item>@font/press_start_2p</item>
         <item>@font/sonsie_one</item>
         <item>@font/unlock</item>
     </array>
