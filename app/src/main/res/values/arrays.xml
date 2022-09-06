@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="exercise">
-        <item>Широкие подтягивания|x10|podtyag_narrow.gif</item> ←!- 0 →
-        <item>Узкие подтягивания|x10|podtyag_narrow.gif</item> ←!- 1 →
-        <item>Девичьи подтягивания|x10|podtyag_narrow.gif</item> ←!- 2 →
-        <item>Отжимания на перекладине|x10|otjim_perekl.gif</item> ←!- 3 →
-        <item>Отжимания узким хватом|x10|narrow_otjim.gif</item> ←!- 4 →
-        <item>Прокачка спины|x10|kach_spinyi.gif</item> ←!- 5 →
-        <item>Брусья|x10|brusya.gif</item> ←!- 6 →
-        <item>Relax|30|rest.gif</item> ←!- 6 →
+        <item>Широкие подтягивания|x10|podtyag_width2.gif</item> ←!- 0 →
+        <item>Узкие подтягивания|x10|podtyag_narrow2.gif</item> ←!- 1 →
+        <item>Девичьи подтягивания|x10|woman_pull2.gif</item> ←!- 2 →
+        <item>Отжимания на перекладине|x10|otjim_perekl2.gif</item> ←!- 3 →
+        <item>Отжимания узким хватом|x10|narrow_otjim2.gif</item> ←!- 4 →
+        <item>Прокачка спины|x10|kach_spinyi2.gif</item> ←!- 5 →
+        <item>Брусья|x10|brusya2.gif</item> ←!- 6 →
+        <item>Relax|30|rest2.gif</item> ←!- 6 →
     </string-array>
 
 
