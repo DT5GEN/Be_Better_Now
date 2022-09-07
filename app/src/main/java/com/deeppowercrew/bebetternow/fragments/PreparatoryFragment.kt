@@ -5,8 +5,10 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.deeppowercrew.bebetternow.R
 import com.deeppowercrew.bebetternow.databinding.PreparatoryFragmentBinding
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.TimeUtils
@@ -21,6 +23,7 @@ class PreparatoryFragment : Fragment() {
 
     private lateinit var binding: PreparatoryFragmentBinding
     private lateinit var timer: CountDownTimer
+    private var actionBarText: ActionBar? = null
 
 
     override fun onCreateView(
@@ -33,6 +36,8 @@ class PreparatoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        actionBarText = (activity as AppCompatActivity).supportActionBar
+        actionBarText?.title = getString(R.string.app_name)
         binding.preparatoryFragmentProgressBar.max = COUNT_DOWN_TIME.toInt()
         startTimer()
     }

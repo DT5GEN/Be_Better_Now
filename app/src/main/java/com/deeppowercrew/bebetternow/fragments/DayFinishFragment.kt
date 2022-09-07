@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.deeppowercrew.bebetternow.R
 import com.deeppowercrew.bebetternow.databinding.DayFinishLayoutBinding
 import com.deeppowercrew.bebetternow.utils.FragmentManager
-import pl.droidsonroids.gif.GifDrawable
 
 
 /**
@@ -17,7 +17,7 @@ import pl.droidsonroids.gif.GifDrawable
  */
 
 class DayFinishFragment : Fragment() {
-
+    private var actionBarText: ActionBar? = null
     private lateinit var binding: DayFinishLayoutBinding
 
 
@@ -31,6 +31,8 @@ class DayFinishFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        actionBarText = (activity as AppCompatActivity).supportActionBar
+        actionBarText?.title = getString(R.string.slogan)
         binding.imageView4.setImageResource(R.drawable.splscr)
         binding.buttonDone.setOnClickListener {
             FragmentManager.setFragment(DaysFragment.newInstance(), activity as AppCompatActivity)
