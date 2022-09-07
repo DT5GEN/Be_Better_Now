@@ -2,6 +2,7 @@ package com.deeppowercrew.bebetternow.fragments
 
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +42,13 @@ class ExerciseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        exerciseCounter = model.getExerciseCount()
+
+        Log.d(
+            "MyLog",
+            "onViewCreated() called with: Counter ${model.getExerciseCount()}"
+        )
+
         actionBarText = (activity as AppCompatActivity).supportActionBar
             model.mutableListExercise.observe(viewLifecycleOwner) {
             exerciseList = it
@@ -129,6 +137,7 @@ class ExerciseFragment : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
+        model.savePrefs(model.currentDay.toString() , exerciseCounter -1)
         timer?.cancel()
     }
 

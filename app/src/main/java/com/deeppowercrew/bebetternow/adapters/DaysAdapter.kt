@@ -24,7 +24,7 @@ class DaysAdapter(var listener: Listener) :
             // daysListItemCounter.text = exCounter
             daysListItemCounter.text =
                 trueCounter.toString() + "  " + root.context.getString(R.string.workouts)
-            itemView.setOnClickListener { listener.onClickDay(day)}    //itemView - прослушиваем весть элемент
+            itemView.setOnClickListener { listener.onClickDay(day.copy(dayNumber = adapterPosition + 1))}    //itemView - прослушиваем весть элемент
         }
     }
 
