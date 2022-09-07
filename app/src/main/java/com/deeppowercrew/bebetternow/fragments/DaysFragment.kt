@@ -37,6 +37,7 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        model.currentDay = 0
         actionBarText = (activity as AppCompatActivity).supportActionBar
         actionBarText?.title = getString(R.string.app_name)
         initRecyclerView()
@@ -53,7 +54,9 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     private fun fillDaysArray(): ArrayList<DayModel> {
         val tempArray = ArrayList<DayModel>()
         resources.getStringArray(R.array.day_exercise).forEach {
-            tempArray.add(DayModel(it, 0, false))
+            model.currentDay++
+            val exCounter = it.split(",").size
+            tempArray.add(DayModel(it, 0, model.getExerciseCount() == exCounter))
         }
         return tempArray
     }

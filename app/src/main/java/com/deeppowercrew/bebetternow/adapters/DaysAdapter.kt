@@ -21,6 +21,7 @@ class DaysAdapter(var listener: Listener) :
             daysListItemName.text = dayName
             val trueCounter = ((day.exercises.split(",").size) / 2) + 1
             val exCounter = day.exercises.split(",").size.toString()
+            checkBoxDay.isChecked = day.isDone
             // daysListItemCounter.text = exCounter
             daysListItemCounter.text =
                 trueCounter.toString() + "  " + root.context.getString(R.string.workouts)

@@ -6,7 +6,7 @@
     android:background="@color/cardview_dark_background">
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/check_box_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
