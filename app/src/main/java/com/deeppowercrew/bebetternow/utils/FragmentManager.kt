@@ -10,6 +10,7 @@ object FragmentManager {
 
     fun setFragment(newFragment: Fragment, activity: AppCompatActivity) {
         val transaction = activity.supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out )
         transaction.replace(R.id.activity_main_place_holder, newFragment)
         transaction.commit()
 
