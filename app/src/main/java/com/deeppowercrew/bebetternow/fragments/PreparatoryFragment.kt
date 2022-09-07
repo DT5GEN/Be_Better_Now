@@ -15,7 +15,7 @@ import com.deeppowercrew.bebetternow.utils.TimeUtils
 /**
  * description fragment
  */
-const val COUNT_DOWN_TIME = 6000L
+const val COUNT_DOWN_TIME = 3000L
 
 class PreparatoryFragment : Fragment() {
 
