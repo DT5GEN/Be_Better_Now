@@ -12,6 +12,7 @@ import com.deeppowercrew.bebetternow.adapters.DayModel
 import com.deeppowercrew.bebetternow.adapters.DaysAdapter
 import com.deeppowercrew.bebetternow.adapters.ExerciseModel
 import com.deeppowercrew.bebetternow.databinding.DaysFragmentBinding
+import com.deeppowercrew.bebetternow.utils.DialogManager
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.MainViewModel
 
@@ -45,8 +46,14 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.reset) {
-            model.prefs?.edit()?.clear()?.apply()
-            adapter.submitList(fillDaysArray())
+            DialogManager.showDialog(activity as AppCompatActivity, R.string.reset_days_message,
+                object : DialogManager.Listener {
+                    override fun onClick() {
+                        model.prefs?.edit()?.clear()?.apply()
+                        adapter.submitList(fillDaysArray())
+                    }
+                })
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -114,12 +121,26 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
         fun newInstance() = DaysFragment()
     }
 
-    override fun onClickDay(day: DayModel) {
+    private fun openThisDay(day: DayModel) {
         fillExerciseList(day)
         model.currentDay = day.dayNumber
         FragmentManager.setFragment(
             ExercisesListFragment.newInstance(),
             activity as AppCompatActivity
         )
+    }
+
+    override fun onClickDay(day: DayModel) {
+        if (!day.isDone) {
+            openThisDay(day)
+        } else {
+            DialogManager.showDialog(activity as AppCompatActivity, R.string.reset_day_message,
+                object : DialogManager.Listener {
+                    override fun onClick() {
+                        model.savePrefs(day.dayNumber.toString(), 0)
+                        openThisDay(day)
+                    }
+                })
+        }
     }
 }

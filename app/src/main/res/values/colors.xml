@@ -7,5 +7,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="backgr">#373737</color>
+    <color name="backgr_alfa">#B2373737</color>
+    <color name="progress">#FFFFFFFF</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="text">#3F51B5</color>
+    <color name="check">#C57500</color>
 </resources>

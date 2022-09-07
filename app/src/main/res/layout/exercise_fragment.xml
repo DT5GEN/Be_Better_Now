@@ -3,22 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background">
+    android:background="@color/backgr">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:background="@color/backgr"
         app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="@+id/cardView3"
         app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/head_gif"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/backgr"
             app:srcCompat="@android:drawable/presence_video_busy" />
     </androidx.cardview.widget.CardView>
 
@@ -65,7 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="8dp"
+                android:scaleY="2" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -74,14 +77,16 @@
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:background="@color/backgr"
         app:layout_constraintBottom_toTopOf="@+id/button_next"
         app:layout_constraintEnd_toEndOf="@+id/cardView3"
         app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/backgr"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -91,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:text="TextView"
-                android:textColor="@color/teal_200"
+                android:textColor="@color/progress"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

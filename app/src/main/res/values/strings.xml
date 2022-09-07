@@ -12,6 +12,10 @@
     <string name="finish"> finish in  </string>
     <string name="days_left"> days</string>
     <string name="reset"> reset</string>
+    <string name="back"> back</string>
+    <string name="attention"> attention</string>
+    <string name="reset_days_message"> Do you really want to reset the progress of all training days?</string>
+    <string name="reset_day_message"> Do you really want to reset this days workout progress?</string>
 
 
 </resources>
