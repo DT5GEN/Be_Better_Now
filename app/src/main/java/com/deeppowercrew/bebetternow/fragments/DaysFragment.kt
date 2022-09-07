@@ -1,9 +1,7 @@
 package com.deeppowercrew.bebetternow.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -25,7 +23,13 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
 
     private lateinit var binding: DaysFragmentBinding
     private var actionBarText: ActionBar? = null
+    private lateinit var adapter: DaysAdapter
     private val model: MainViewModel by activityViewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +37,18 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     ): View {
         binding = DaysFragmentBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        return inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.reset) {
+            model.prefs?.edit()?.clear()?.apply()
+            adapter.submitList(fillDaysArray())
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,7 +61,7 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     }
 
     private fun initRecyclerView() = with(binding) {
-        val adapter = DaysAdapter(this@DaysFragment)
+        adapter = DaysAdapter(this@DaysFragment)
         recyclerViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
         recyclerViewDays.adapter = adapter
         adapter.submitList(fillDaysArray())

@@ -11,5 +11,7 @@
     <string name="well_done"> well done</string>
     <string name="finish"> finish in  </string>
     <string name="days_left"> days</string>
+    <string name="reset"> reset</string>
+
 
 </resources>
