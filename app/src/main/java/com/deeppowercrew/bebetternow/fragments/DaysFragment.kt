@@ -13,7 +13,7 @@ import com.deeppowercrew.bebetternow.R
 import com.deeppowercrew.bebetternow.adapters.DayModel
 import com.deeppowercrew.bebetternow.adapters.DaysAdapter
 import com.deeppowercrew.bebetternow.adapters.ExerciseModel
-import com.deeppowercrew.bebetternow.databinding.FragmentDaysBinding
+import com.deeppowercrew.bebetternow.databinding.DaysFragmentBinding
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.MainViewModel
 
@@ -23,7 +23,7 @@ import com.deeppowercrew.bebetternow.utils.MainViewModel
  */
 class DaysFragment : Fragment(), DaysAdapter.Listener {
 
-    private lateinit var binding: FragmentDaysBinding
+    private lateinit var binding: DaysFragmentBinding
     private var actionBarText: ActionBar? = null
     private val model: MainViewModel by activityViewModels()
 
@@ -31,7 +31,7 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDaysBinding.inflate(inflater, container, false)
+        binding = DaysFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -53,12 +53,26 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
 
     private fun fillDaysArray(): ArrayList<DayModel> {
         val tempArray = ArrayList<DayModel>()
+        var successfulDays = 0
         resources.getStringArray(R.array.day_exercise).forEach {
             model.currentDay++
             val exCounter = it.split(",").size
             tempArray.add(DayModel(it, 0, model.getExerciseCount() == exCounter))
         }
+
+        binding.progressBar.max = tempArray.size
+
+        tempArray.forEach {
+            if (it.isDone) successfulDays++
+        }
+        updateSuccessfulDaysUI(tempArray.size - successfulDays, tempArray.size)
         return tempArray
+    }
+
+    private fun updateSuccessfulDaysUI(sucDays: Int, days: Int) = with(binding) {
+        val rDays = getString(R.string.finish) + " $sucDays " + getString(R.string.days_left)
+        fragmentDaysStatusText.text = rDays
+        progressBar.progress = days - sucDays
     }
 
     private fun fillExerciseList(day: DayModel) {

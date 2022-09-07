@@ -5,9 +5,11 @@
     <string name="workouts">  workouts</string>
     <string name="waiting_message"> get ready </string>
     <string name="start_button"> start </string>
-    <string name="days"> training days </string>
+    <string name="training_days"> training days </string>
     <string name="exercises_list"> your exercises </string>
     <string name="next_button"> next </string>
     <string name="well_done"> well done</string>
+    <string name="finish"> finish in  </string>
+    <string name="days_left"> days</string>
 
 </resources>
