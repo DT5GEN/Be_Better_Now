@@ -21,6 +21,7 @@ class ExercisesAdapter() :
 
             exerciseListItemTvName.text = exercise.name
             exerciseListItemTvReps.text = exercise.time
+            exerciseListItemImageCheckBox.isChecked = exercise.isDone
             exerciseListItemImage.setImageDrawable(GifDrawable(root.context.assets,exercise.image))
                 exerciseListItemImageCheckBox
 

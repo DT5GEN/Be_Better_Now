@@ -14,6 +14,7 @@
 
 
     <string-array name="day_exercise">
+        <item>0,7,1</item> ←!- Day 0 →
         <item>0,7,1,7,2,7,3,7,4,7,5,7,6</item> ←!- Day 1 →
         <item>6,7,5,7,4,7,3,7,2,7,1,7,0</item> ←!- Day 2 →
         <item>0,7,1,7,2,7,3,7,4,7,5,7,6,7,1,7,2</item> ←!- Day 3 →
