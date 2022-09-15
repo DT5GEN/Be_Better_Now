@@ -150,13 +150,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/splscr"
+                        android:src="@drawable/full_body"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/text_FB"
@@ -221,7 +219,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/splscr"
+                        android:src="@drawable/abs"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -232,10 +230,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="@font/unlock"
-                        android:text="ABS"
+                        android:layout_marginStart="114dp"
+                        android:background="@color/backgr_alfa"
+                        android:backgroundTint="@color/backgr_alfa"
 
+                        android:backgroundTintMode="multiply"
+                        android:fontFamily="@font/unlock"
+                        android:text=" ABS "
                         android:textColor="@color/white"
                         android:textSize="28sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -296,7 +297,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/splscr"
+                        android:src="@drawable/expander_cut"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -366,11 +367,11 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageSB"
+                        android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/splscr"
+                        android:src="@drawable/shoulder"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
