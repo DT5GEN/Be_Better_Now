@@ -4,6 +4,7 @@
     android:id="@+id/activity_main_place_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/cardview_dark_background"
     tools:context=".MainActivity">
 
