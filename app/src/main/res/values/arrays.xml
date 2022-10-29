@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="exercise">
-        <item>Широкие подтягивания|x10|podtyag_width2.gif</item> ←!- 0 →
-        <item>Узкие подтягивания|10|podtyag_narrow2.gif</item> ←!- 1 →
-        <item>Девичьи подтягивания|10|woman_pull2.gif</item> ←!- 2 →
-        <item>Отжимания на перекладине|x10|otjim_perekl2.gif</item> ←!- 3 →
-        <item>Отжимания узким хватом|x10|narrow_otjim2.gif</item> ←!- 4 →
-        <item>Прокачка спины|x10|kach_spinyi2.gif</item> ←!- 5 →
-        <item>Брусья|x10|brusya2.gif</item> ←!- 6 →
-        <item>Relax|30|rest.gif</item> ←!- 7 →
+        <item>подтягивания|x10|podtyag_width2.gif</item> ←!- 0 →
+        <item>подтягивания|x10|podtyag_narrow2.gif</item> ←!- 1 →
+        <item>подтягивания|10|woman_pull2.gif</item> ←!- 2 →
+        <item>на перекладине|x10|otjim_perekl2.gif</item> ←!- 3 →
+        <item>узким хватом|x10|narrow_otjim2.gif</item> ←!- 4 →
+        <item>спина|x10|kach_spinyi2.gif</item> ←!- 5 →
+        <item>брусья|x10|brusya2.gif</item> ←!- 6 →
+        <item>Relax|20|rest.gif</item> ←!- 7 →
         <item>well done|30|rest2.gif</item> ←!- 8 →
+        <item>бицепс|x15|biceps.gif</item> ←!- 9 →
+        <item>грудь|x15|grud_l.gif</item> ←!- 10 →
+        <item>грудь|x12|grud_lev.gif</item> ←!- 11 →
+        <item>грудь|x15|grud_p.gif</item> ←!- 12 →
+        <item>плечо|x15|l_plecho.gif</item> ←!- 13 →
+        <item>рука|x20|lev_ruka.gif</item> ←!- 14 →
+        <item>ноги\спина|x18|nogi_spina.gif</item> ←!- 15 →
+        <item>плечо|x15|p_plecho.gif</item> ←!- 16 →
+        <item>дельты|x16|plechi.gif</item> ←!- 17 →
+        <item>дельты|x12|plechi_l.gif</item> ←!- 18 →
+        <item>дельты|x12|plechi_r.gif</item> ←!- 19 →
+        <item>плечи|x12|plechi_r_lev.gif</item> ←!- 20 →
+        <item>плечи\спина|x12|plechi_spina_l.gif</item> ←!- 21 →
+        <item>плечи\спина|x12|plechi_spina_r.gif</item> ←!- 22 →
+        <item>косые мышцы|x15|press_kosie_lev.gif</item> ←!- 23 →
+        <item>косые мышцы|x15|press_kosie_prav.gif</item> ←!- 24 →
+        <item>приседы|x20|prised.gif</item> ←!- 25 →
+        <item>спина|x15|spina_r.gif</item> ←!- 26 →
+        <item>спина|x18|spina_r_l.gif</item> ←!- 27 →
+        <item>левый прицепс|x10|triceps_l.gif</item> ←!- 28 →
+        <item>правый трицепс|x10|triceps_r.gif</item> ←!- 29 →
+        <item>трицепсы|x15|tricepsi.gif</item> ←!- 30 →
+        <item>выпады|x15|vypads2.gif</item> ←!- 31 →
     </string-array>
 
 
     <string-array name="day_exercise">
-        <item>0,7,1</item> ←!- Day 0 →
-        <item>0,7,1,7,2,7,3,7,4,7,5,7,6</item> ←!- Day 1 →
+        <item>0,7,1,7,30,7,27,7,12,7,14</item> ←!- Day 0 →
+        <item>23,7,24,7,2,7,3,7,25,7,5,7,6</item> ←!- Day 1 →
         <item>6,7,5,7,4,7,3,7,2,7,1,7,0</item> ←!- Day 2 →
         <item>0,7,1,7,2,7,3,7,4,7,5,7,6,7,1,7,2</item> ←!- Day 3 →
-        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 4 →
+        <item>6,7,28,7,29,7,3,7,27,7,1,7,0,7,5,7,4</item> ←!- Day 4 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 5 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 6 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 7 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 8 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 9 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 10 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 11 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 12 →
+        <item>6,7,5,7,4,7,3,7,2,7,1,7,0,7,5,7,4</item> ←!- Day 13 →
+
 
     </string-array>
 
