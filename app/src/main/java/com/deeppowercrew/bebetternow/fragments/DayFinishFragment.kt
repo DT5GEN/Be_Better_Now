@@ -41,9 +41,6 @@ class DayFinishFragment : Fragment() {
 
 
     companion object {
-        /**
-        fdgd
-         */
 
         @JvmStatic
         fun newInstance() = DayFinishFragment()

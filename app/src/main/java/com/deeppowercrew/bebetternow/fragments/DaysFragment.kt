@@ -113,9 +113,7 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     }
 
     companion object {
-        /**
-        fdgd
-         */
+
 
         @JvmStatic
         fun newInstance() = DaysFragment()
