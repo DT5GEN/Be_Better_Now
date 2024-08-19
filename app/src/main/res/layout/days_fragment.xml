@@ -90,7 +90,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                android:text="finish in 20 days"
+                android:text="@string/finish_in_20_days"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/progress_bar"
                 app:layout_constraintEnd_toEndOf="@+id/progress_bar"

@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/backgr"
+            android:contentDescription="@string/imagePlayer"
             app:srcCompat="@android:drawable/presence_video_busy" />
     </androidx.cardview.widget.CardView>
 
@@ -47,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/text_view_exerc_fragm"
                 android:textColor="@color/blue_dark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -57,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sonsie_one"
-                android:text="00:30"
+                android:text="@string/_00_30"
                 android:textColor="@android:color/holo_orange_light"
                 android:textSize="60sp" />
 
@@ -95,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="TextView"
+                android:text="@string/text_view"
                 android:textColor="@color/progress"
                 android:textSize="20sp"
                 android:textStyle="bold" />

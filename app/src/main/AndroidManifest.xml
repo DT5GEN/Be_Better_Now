@@ -17,8 +17,9 @@
             android:noHistory="true"
             android:theme="@style/Theme.Splash"
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:screenOrientation="fullSensor"
+            android:exported="false"
+            tools:ignore="DiscouragedApi" />
         <activity
             android:name=".SplashscreenActivity"
             android:exported="true">

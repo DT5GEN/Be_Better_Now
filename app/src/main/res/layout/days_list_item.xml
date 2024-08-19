@@ -44,7 +44,7 @@
                 android:id="@+id/days_list_item_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/text_view"
                 android:textColor="@color/blue_dark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -53,7 +53,7 @@
                 android:id="@+id/days_list_item_counter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/text_view"
                 android:textColor="?attr/colorError" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -16,6 +16,16 @@
     <string name="attention"> attention</string>
     <string name="reset_days_message"> Do you really want to reset the progress of all training days?</string>
     <string name="reset_day_message"> Do you really want to reset this days workout progress?</string>
+    <string name="_00_15">00 : 15</string>
+    <string name="text_view_exercise_list">TextView</string>
+    <string name="x_30">x 30</string>
+    <string name="imagePlayer">ImagePlayer</string>
+    <string name="text_view_exerc_fragm">TextView</string>
+    <string name="_00_30">00:30</string>
+    <string name="text_view">TextView</string>
+    <string name="finish_in_20_days">finish in 20 days</string>
+    <string name="well_done_text">WELL DONE</string>
+    <string name="finish_text">finish</string>
 
 
 </resources>
