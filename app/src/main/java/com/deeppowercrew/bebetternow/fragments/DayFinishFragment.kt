@@ -12,9 +12,6 @@ import com.deeppowercrew.bebetternow.databinding.DayFinishLayoutBinding
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 
 
-/**
- * description fragment
- */
 
 class DayFinishFragment : Fragment() {
     private var actionBarText: ActionBar? = null
@@ -41,9 +38,6 @@ class DayFinishFragment : Fragment() {
 
 
     companion object {
-        /**
-        fdgd
-         */
 
         @JvmStatic
         fun newInstance() = DayFinishFragment()

@@ -3,7 +3,6 @@ package com.deeppowercrew.bebetternow
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.activityViewModels
 import com.deeppowercrew.bebetternow.fragments.DaysFragment
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.MainViewModel
@@ -19,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         FragmentManager.setFragment(DaysFragment.newInstance(), this)
     }
 
-    override fun onBackPressed() {
+    @Deprecated("Deprecated in Java")
+    @Suppress("DEPRECATION")
+        override fun onBackPressed() {
         if (FragmentManager.currentFragment is DaysFragment) super.onBackPressed()
         else FragmentManager.setFragment(DaysFragment.newInstance(), this)
     }

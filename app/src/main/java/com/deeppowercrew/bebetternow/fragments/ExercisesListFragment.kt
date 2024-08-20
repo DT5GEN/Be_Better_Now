@@ -16,9 +16,6 @@ import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.MainViewModel
 
 
-/**
- * description fragment
- */
 class ExercisesListFragment : Fragment() {
 
     private lateinit var binding: ExercisesListFragmentBinding
@@ -61,9 +58,6 @@ class ExercisesListFragment : Fragment() {
 
 
     companion object {
-        /**
-        fdgd
-         */
 
         @JvmStatic
         fun newInstance() = ExercisesListFragment()

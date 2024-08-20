@@ -17,9 +17,7 @@ import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.MainViewModel
 
 
-/**
- * description fragment
- */
+@Suppress("DEPRECATION")
 class DaysFragment : Fragment(), DaysAdapter.Listener {
 
     private lateinit var binding: DaysFragmentBinding
@@ -40,10 +38,12 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
         return binding.root
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         return inflater.inflate(R.menu.main_menu, menu)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.reset) {
             DialogManager.showDialog(activity as AppCompatActivity, R.string.reset_days_message,
@@ -113,9 +113,6 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     }
 
     companion object {
-        /**
-        fdgd
-         */
 
         @JvmStatic
         fun newInstance() = DaysFragment()

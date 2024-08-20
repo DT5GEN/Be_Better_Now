@@ -1,5 +1,6 @@
 package com.deeppowercrew.bebetternow.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -19,9 +20,6 @@ import com.deeppowercrew.bebetternow.utils.TimeUtils
 import pl.droidsonroids.gif.GifDrawable
 
 
-/**
- * description fragment
- */
 class ExerciseFragment : Fragment() {
 
     private var timer: CountDownTimer? = null
@@ -41,6 +39,7 @@ class ExerciseFragment : Fragment() {
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         currentDay = model.currentDay
@@ -146,9 +145,6 @@ class ExerciseFragment : Fragment() {
 
 
     companion object {
-        /**
-        fdgd
-         */
 
         @JvmStatic
         fun newInstance() = ExerciseFragment()

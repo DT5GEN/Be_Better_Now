@@ -13,10 +13,6 @@ import com.deeppowercrew.bebetternow.databinding.PreparatoryFragmentBinding
 import com.deeppowercrew.bebetternow.utils.FragmentManager
 import com.deeppowercrew.bebetternow.utils.TimeUtils
 
-
-/**
- * description fragment
- */
 const val COUNT_DOWN_TIME = 3000L
 
 class PreparatoryFragment : Fragment() {
@@ -65,11 +61,7 @@ class PreparatoryFragment : Fragment() {
     }
 
     companion object {
-        /**
-        fdgd
-         */
-
-        @JvmStatic
+              @JvmStatic
         fun newInstance() = PreparatoryFragment()
     }
 }

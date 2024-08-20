@@ -1,5 +1,6 @@
 package com.deeppowercrew.bebetternow.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,23 +10,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.deeppowercrew.bebetternow.R
 import com.deeppowercrew.bebetternow.databinding.DaysListItemBinding
 
-class DaysAdapter(var listener: Listener) :
+class DaysAdapter(private var listener: Listener) :
     ListAdapter<DayModel, DaysAdapter.DayHolder>(MyComparator()) {
 
     class DayHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val binding = DaysListItemBinding.bind(view)
 
+        @SuppressLint("SetTextI18n")
         fun setData(day: DayModel, listener: Listener) = with(binding) {
             val dayName = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
             daysListItemName.text = dayName
             val trueCounter = ((day.exercises.split(",").size) / 2) + 1
-            val exCounter = day.exercises.split(",").size.toString()
+            day.exercises.split(",").size.toString()
             checkBoxDay.isChecked = day.isDone
             // daysListItemCounter.text = exCounter
             daysListItemCounter.text =
                 trueCounter.toString() + "  " + root.context.getString(R.string.workouts)
-            itemView.setOnClickListener { listener.onClickDay(day.copy(dayNumber = adapterPosition + 1))}    //itemView - прослушиваем весть элемент
+            itemView.setOnClickListener { listener.onClickDay(day.copy(dayNumber = adapterPosition + 1))}    //itemView - listen to the entire element
         }
     }
 
