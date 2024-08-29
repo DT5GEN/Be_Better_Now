@@ -7,9 +7,9 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId 'com.deeppowercrew.bebetter2'
+        applicationId 'com.deeppowercrew.bebetter3'
         minSdk 23
-        targetSdk 35
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
